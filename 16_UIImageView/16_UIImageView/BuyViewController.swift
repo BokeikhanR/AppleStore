@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  BuyVC.swift
 //  16_UIImageView
 //
 //  Created by admin on 09.07.2021.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-final class ForYouVC: UIViewController {
+final class BuyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Для вас"
+        title = "Купить"
         view.backgroundColor = .black
     }
 

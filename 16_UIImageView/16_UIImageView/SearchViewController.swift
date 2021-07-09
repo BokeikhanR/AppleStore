@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SearchVC: UIViewController {
+final class SearchViewController: UIViewController {
 
     private var tabBarImage = UITabBarItem()
     private var searchLabel = UILabel()
@@ -33,8 +33,8 @@ final class SearchVC: UIViewController {
         super.viewDidLoad()
 
         tapToGisture()
-        viewElement1()
-        viewElement2()
+        viewElementChehol()
+        viewElementBelt()
         poiskTextFieldFunc()
         zaprosTextFieldFunc()
         elementLabelsFunc()
@@ -142,7 +142,7 @@ final class SearchVC: UIViewController {
 
 //View Element number 2
 
-    private func viewElement2() {
+    private func viewElementBelt() {
 
         elementView2.frame = CGRect(x: 190, y: 250, width: 150, height: 180)
         nameElementLabel2.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
@@ -164,7 +164,7 @@ final class SearchVC: UIViewController {
 
 //View Element number 1
 
-    private func viewElement1() {
+    private func viewElementChehol() {
 
         elementView.frame = CGRect(x: 20, y: 250, width: 150, height: 180)
         nameElementLabel.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
@@ -207,12 +207,12 @@ final class SearchVC: UIViewController {
         elementView.isUserInteractionEnabled = true
     }
 
-    @objc func hundleTap(sender: UITapGestureRecognizer? = nil) {
+    @objc func hundleTap(sender: UITapGestureRecognizer) {
         let productVC = ProductViewController()
         navigationController?.pushViewController(productVC, animated: true)
-        productVC.a = nameElementLabel.text
-        productVC.image = elementImage.image
-        productVC.b = "3 999.9 Руб"
+        productVC.textLabel = nameElementLabel.text
+        productVC.elementViewImage = elementImage.image
+        productVC.senaText = "3 999.9 Руб"
         
     }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BascetVC: UIViewController {
+final class BascetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

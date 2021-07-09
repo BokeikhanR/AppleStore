@@ -13,10 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        let buyVC = BuyVC()
-        let forYouVC = ForYouVC()
-        let searchVC = SearchVC()
-        let bascetVC = BascetVC()
+        let buyVC = BuyViewController()
+        let forYouVC = ForYouViewController()
+        let searchVC = SearchViewController()
+        let bascetVC = BascetViewController()
 
         let navigationController = UINavigationController(rootViewController: searchVC)
 

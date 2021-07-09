@@ -202,7 +202,7 @@ final class SearchViewController: UIViewController {
 
     private func tapToGisture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hundleTap))
-        tap.numberOfTapsRequired = 2
+        tap.numberOfTapsRequired = 1
         elementView.addGestureRecognizer(tap)
         elementView.isUserInteractionEnabled = true
     }

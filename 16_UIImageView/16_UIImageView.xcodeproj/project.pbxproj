@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		847C39AB269851F100CFE503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39AA269851F100CFE503 /* AppDelegate.swift */; };
 		847C39AD269851F100CFE503 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39AC269851F100CFE503 /* SceneDelegate.swift */; };
-		847C39AF269851F100CFE503 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39AE269851F100CFE503 /* SearchVC.swift */; };
+		847C39AF269851F100CFE503 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39AE269851F100CFE503 /* SearchViewController.swift */; };
 		847C39B2269851F100CFE503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847C39B0269851F100CFE503 /* Main.storyboard */; };
 		847C39B4269851F400CFE503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847C39B3269851F400CFE503 /* Assets.xcassets */; };
 		847C39B7269851F400CFE503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847C39B5269851F400CFE503 /* LaunchScreen.storyboard */; };
-		847C39C126986E0D00CFE503 /* ForYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39C026986E0D00CFE503 /* ForYouVC.swift */; };
-		847C39C5269871C400CFE503 /* BuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39C4269871C400CFE503 /* BuyVC.swift */; };
-		847C39CA2698721E00CFE503 /* BascetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39C92698721E00CFE503 /* BascetVC.swift */; };
+		847C39C126986E0D00CFE503 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39C026986E0D00CFE503 /* ForYouViewController.swift */; };
+		847C39C5269871C400CFE503 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39C4269871C400CFE503 /* BuyViewController.swift */; };
+		847C39CA2698721E00CFE503 /* BascetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39C92698721E00CFE503 /* BascetViewController.swift */; };
 		847C39CE2698D3E900CFE503 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39CD2698D3E900CFE503 /* ProductViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,14 +23,14 @@
 		847C39A7269851F100CFE503 /* 16_UIImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 16_UIImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847C39AA269851F100CFE503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847C39AC269851F100CFE503 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		847C39AE269851F100CFE503 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		847C39AE269851F100CFE503 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		847C39B1269851F100CFE503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		847C39B3269851F400CFE503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847C39B6269851F400CFE503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847C39B8269851F400CFE503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		847C39C026986E0D00CFE503 /* ForYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouVC.swift; sourceTree = "<group>"; };
-		847C39C4269871C400CFE503 /* BuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyVC.swift; sourceTree = "<group>"; };
-		847C39C92698721E00CFE503 /* BascetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BascetVC.swift; sourceTree = "<group>"; };
+		847C39C026986E0D00CFE503 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		847C39C4269871C400CFE503 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		847C39C92698721E00CFE503 /* BascetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BascetViewController.swift; sourceTree = "<group>"; };
 		847C39CD2698D3E900CFE503 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,10 +66,10 @@
 			children = (
 				847C39AA269851F100CFE503 /* AppDelegate.swift */,
 				847C39AC269851F100CFE503 /* SceneDelegate.swift */,
-				847C39C4269871C400CFE503 /* BuyVC.swift */,
-				847C39C026986E0D00CFE503 /* ForYouVC.swift */,
-				847C39AE269851F100CFE503 /* SearchVC.swift */,
-				847C39C92698721E00CFE503 /* BascetVC.swift */,
+				847C39C4269871C400CFE503 /* BuyViewController.swift */,
+				847C39C026986E0D00CFE503 /* ForYouViewController.swift */,
+				847C39AE269851F100CFE503 /* SearchViewController.swift */,
+				847C39C92698721E00CFE503 /* BascetViewController.swift */,
 				847C39CD2698D3E900CFE503 /* ProductViewController.swift */,
 				847C39B0269851F100CFE503 /* Main.storyboard */,
 				847C39B3269851F400CFE503 /* Assets.xcassets */,
@@ -149,11 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847C39C5269871C400CFE503 /* BuyVC.swift in Sources */,
-				847C39C126986E0D00CFE503 /* ForYouVC.swift in Sources */,
-				847C39CA2698721E00CFE503 /* BascetVC.swift in Sources */,
+				847C39C5269871C400CFE503 /* BuyViewController.swift in Sources */,
+				847C39C126986E0D00CFE503 /* ForYouViewController.swift in Sources */,
+				847C39CA2698721E00CFE503 /* BascetViewController.swift in Sources */,
 				847C39CE2698D3E900CFE503 /* ProductViewController.swift in Sources */,
-				847C39AF269851F100CFE503 /* SearchVC.swift in Sources */,
+				847C39AF269851F100CFE503 /* SearchViewController.swift in Sources */,
 				847C39AB269851F100CFE503 /* AppDelegate.swift in Sources */,
 				847C39AD269851F100CFE503 /* SceneDelegate.swift in Sources */,
 			);

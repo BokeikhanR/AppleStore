@@ -31,7 +31,7 @@ final class ProductViewController: UIViewController {
         productLabel2()
     }
 
-//MARK: - product Image Method
+//MARK: - Methods
 
     private func productImageFunc() {
         productImage.frame = CGRect(x: 50, y: 200, width: 300, height: 230)
@@ -39,7 +39,7 @@ final class ProductViewController: UIViewController {
         view.addSubview(productImage)
     }
 
-//MARK: - Product Name Label
+    //LABEL Number 1
 
     private func funcProductLabel1() {
         productlabel1.frame = CGRect(x: 20, y: 120, width: 200, height: 60)
@@ -51,7 +51,7 @@ final class ProductViewController: UIViewController {
         view.addSubview(productlabel1)
     }
 
-//MARK: - Product Sena Label
+    //LABEL Number 2
 
     private func productLabel2() {
         productlabel2.frame = CGRect(x: 150, y: 150, width: 80, height: 60)

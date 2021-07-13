@@ -22,15 +22,18 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
         buyVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
 
+
         forYouVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "person.crop.circle"), tag: 1)
 
+
         searchVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "magnifyingglass"), tag: 2)
+   
 
         bascetVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "bag"), tag: 3)
 
         let tabBarVC = UITabBarController()
         tabBarVC.setViewControllers([buyVC, forYouVC, navigationController, bascetVC], animated: true)
-    tabBarVC.tabBar.barTintColor = .black
+        tabBarVC.tabBar.barTintColor = .black
 
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()

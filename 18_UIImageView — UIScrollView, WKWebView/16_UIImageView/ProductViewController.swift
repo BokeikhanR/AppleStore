@@ -11,14 +11,14 @@ final class ProductViewController: UIViewController {
 
 //MARK: - VIew Properties
 
-     public var textLabel: String?
-     public var senaText: String?
-     public var elementViewImage: UIImage?
+      var labelText: String?
+      var senaText: String?
+      var elementViewImage: UIImage?
     
      private var productlabel = UILabel()
      private var productNameLabel = UILabel()
      private var senaLabel = UILabel()
-     private var productImage = UIImageView()
+     private var productImageView = UIImageView()
 
      //ScrollView
      private var detailScrollView = UIScrollView()
@@ -38,14 +38,9 @@ final class ProductViewController: UIViewController {
      private var dostavkaTextField = UITextField()
 
 //MARK: - Visual Components
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-        let tap = UITapGestureRecognizer(target: self, action: #selector(hundleTap))
-        tap.numberOfTapsRequired = 1
-        detailScrollView.addGestureRecognizer(tap)
-        detailScrollView.isUserInteractionEnabled = true
 
         dostavkaElements()
         nadpisElements()
@@ -54,16 +49,29 @@ final class ProductViewController: UIViewController {
         funcProductLabel()
         elementLabel()
         createProductNameLabel()
-
-        //Navigation Items
-        let shareButton = UIBarButtonItem(image: UIImage(named: "square.and.arrow.up"), style: .done, target: self, action: #selector(tappedShareButton))
-        let heartButton = UIBarButtonItem(image: UIImage(named: "heart"), style: .plain, target: self, action: #selector(tappedHeartButton))
-        navigationItem.rightBarButtonItems = [heartButton, shareButton]
-        navigationController?.navigationBar.barTintColor = .black
-        tabBarController?.tabBar.barTintColor = .black
+        createTapGasture()
+        createNavigationItem()
 
     }
 
+//MARK: - Navigation Items
+
+    private func createNavigationItem(){
+    let shareButton = UIBarButtonItem(image: UIImage(named: "square.and.arrow.up"), style: .done, target: self, action: #selector(tappedShareButton))
+    let heartButton = UIBarButtonItem(image: UIImage(named: "heart"), style: .plain, target: self, action: #selector(tappedHeartButton))
+    navigationItem.rightBarButtonItems = [heartButton, shareButton]
+    navigationController?.navigationBar.barTintColor = .black
+    tabBarController?.tabBar.barTintColor = .black
+    }
+
+//MARK: - Tap Gasture Method
+
+    private func createTapGasture(){
+    let tap = UITapGestureRecognizer(target: self, action: #selector(hundleTap))
+    tap.numberOfTapsRequired = 1
+    detailScrollView.addGestureRecognizer(tap)
+    detailScrollView.isUserInteractionEnabled = true
+    }
 
 //MARK: - @OBJC Methods
 
@@ -111,7 +119,7 @@ final class ProductViewController: UIViewController {
     // Product Label
     private func funcProductLabel() {
         productlabel.frame = CGRect(x: 20, y: 120, width: 200, height: 60)
-        productlabel.text = textLabel
+        productlabel.text = labelText
         productlabel.adjustsFontSizeToFitWidth = true
         productlabel.sizeToFit()
         productlabel.textColor = .white
@@ -124,7 +132,7 @@ final class ProductViewController: UIViewController {
     private func createProductNameLabel(){
 
         productNameLabel.frame = CGRect(x: 78, y: 440, width: 200, height: 60)
-        productNameLabel.text = textLabel
+        productNameLabel.text = labelText
         productNameLabel.adjustsFontSizeToFitWidth = true
         productNameLabel.sizeToFit()
         productNameLabel.textColor = .white
@@ -146,7 +154,7 @@ final class ProductViewController: UIViewController {
     
 //MARK: - View Component Functions
 
-    fileprivate func dostavkaElements() {
+    private func dostavkaElements() {
         //Dostavka Text FIield
 
         dostavkaTextField.frame = CGRect(x: 30, y: 705, width: 200, height: 30)
@@ -172,7 +180,7 @@ final class ProductViewController: UIViewController {
         view.addSubview(addressLabel)
     }
 
-    fileprivate func nadpisElements() {
+    private func nadpisElements() {
         //Nadpis s knopkoi
 
         stoimostTextField.frame = CGRect(x: 50, y: 550, width: 200, height: 30)
@@ -193,7 +201,7 @@ final class ProductViewController: UIViewController {
 
 //MARK: - Color AND Korzina Buttons
 
-    fileprivate func colorAndKorzinaButtons() {
+    private func colorAndKorzinaButtons() {
         //Buttons
 
         whiteColorButton.frame = CGRect(x: 160, y: 500, width: 36, height: 36)
@@ -217,7 +225,7 @@ final class ProductViewController: UIViewController {
 
 //MARK: - Create Scroll View
 
-    fileprivate func createScrollViewElements() {
+    private func createScrollViewElements() {
         //Cases
         let papkaNumberOne = UIImage(named: "case")
         let papkaNumberTwo = UIImage(named: "case2")

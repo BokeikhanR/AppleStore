@@ -23,16 +23,16 @@ final class SearchViewController: UIViewController {
     private var beatsTextField = UITextField()
     private var iphoneTextField = UITextField()
 
-    private var inhaceFlat = UIView()
+    private var inhaceFlatView = UIView()
     private var nameElementLabel = UILabel()
     private var inhaceFlatImage = UIImageView()
 
-    private var blackUnity = UIView()
-    private var caseBown = UIView()
+    private var blackUnityView = UIView()
+    private var caseBownView = UIView()
     private var nameElementLabel2 = UILabel()
     private var nameElementLabel3 = UILabel()
-    private var blackUnityImage = UIImageView()
-    private var caseBownImage = UIImageView()
+    private var blackUnityImageView = UIImageView()
+    private var caseBownImageView = UIImageView()
 
     private var elementsScrollView = UIScrollView()
 
@@ -46,11 +46,10 @@ final class SearchViewController: UIViewController {
         tapToGisture()
         viewElementChehol()
         viewElementBelt()
-        poiskTextFieldFunc()
-        zaprosTextFieldFunc()
-        elementLabelsFunc()
+        createPoiskTextField()
+        createZaprosTextField()
+        elementLabels()
         viewElementFunc()
-
         caseBownFunction()
 
     }
@@ -68,18 +67,12 @@ final class SearchViewController: UIViewController {
 
 //MARK: - Scroll View
 
-    fileprivate func scrollViewFunction() {
-        //Create first ViewElements
-        elementsScrollView.addSubview(inhaceFlat)
+    private func scrollViewFunction() {
 
-        //Create second ViewElement
-        elementsScrollView.addSubview(blackUnity)
-
-        //Create second ViewElement3
-        elementsScrollView.addSubview(caseBownImage)
-
+        elementsScrollView.addSubview(inhaceFlatView)
+        elementsScrollView.addSubview(blackUnityView)
+        elementsScrollView.addSubview(caseBownImageView)
         let scrollViewRect = CGRect(x: 20, y: 250, width: 350, height: 200)
-
         elementsScrollView.frame = scrollViewRect
         elementsScrollView.isPagingEnabled = true
         elementsScrollView.contentSize = CGSize(width: scrollViewRect.size.width * 3,
@@ -98,7 +91,7 @@ final class SearchViewController: UIViewController {
 
 //Element Labels
 
-    private func elementLabelsFunc() {
+    private func elementLabels() {
         searchLabel.frame = CGRect(x: 20, y: 50, width: 200, height: 60)
         searchLabel.text = "Поиск"
         searchLabel.textColor = .systemGray6
@@ -126,8 +119,7 @@ final class SearchViewController: UIViewController {
 
 //MARK: - Zapros TextFields
 
-    private func zaprosTextFieldFunc() {
-        // airPodsTextField number 1
+    private func createZaprosTextField() {
 
         airPodsTextField.frame = CGRect(x: 25, y: 480, width: 200, height: 40)
         let poiskImage1 = UIImage(named: "magnifyingglass")
@@ -179,52 +171,52 @@ final class SearchViewController: UIViewController {
 //MARK: - View Elements
 
     //caseBown View
-    fileprivate func caseBownFunction() {
-        caseBown.frame = CGRect(x: 360, y: 10, width: 150, height: 180)
+    private func caseBownFunction() {
+        caseBownView.frame = CGRect(x: 360, y: 10, width: 150, height: 180)
         nameElementLabel3.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
-        caseBownImage.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
-        caseBownImage.image = UIImage(named: "caseBown")
-        caseBownImage.contentMode = .scaleAspectFit
+        caseBownImageView.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
+        caseBownImageView.image = UIImage(named: "caseBown")
+        caseBownImageView.contentMode = .scaleAspectFit
         nameElementLabel3.text = "Кожанный чехол для MacBook, 16 дьюмовый"
         nameElementLabel3.textColor = .white
         nameElementLabel3.font = UIFont.boldSystemFont(ofSize: 10)
         nameElementLabel3.numberOfLines = 0
         nameElementLabel3.adjustsFontSizeToFitWidth = true
         nameElementLabel3.sizeToFit()
-        caseBown.addSubview(caseBownImage)
-        caseBown.addSubview(nameElementLabel3)
-        caseBown.backgroundColor = .systemGray
-        caseBown.layer.cornerRadius = 10
-        caseBown.tag = 2
-        elementsScrollView.addSubview(caseBown)
+        caseBownView.addSubview(caseBownImageView)
+        caseBownView.addSubview(nameElementLabel3)
+        caseBownView.backgroundColor = .systemGray
+        caseBownView.layer.cornerRadius = 10
+        caseBownView.tag = 2
+        elementsScrollView.addSubview(caseBownView)
     }
 
     //blackUnity View
     private func viewElementBelt() {
 
-        blackUnity.frame = CGRect(x: 190, y: 10, width: 150, height: 180)
+        blackUnityView.frame = CGRect(x: 190, y: 10, width: 150, height: 180)
         nameElementLabel2.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
-        blackUnityImage.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
-        blackUnityImage.image = UIImage(named: "belt")
-        blackUnityImage.contentMode = .scaleAspectFit
+        blackUnityImageView.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
+        blackUnityImageView.image = UIImage(named: "belt")
+        blackUnityImageView.contentMode = .scaleAspectFit
         nameElementLabel2.text = "Спортивный ремешок Black Unity"
         nameElementLabel2.textColor = .white
         nameElementLabel2.font = UIFont.boldSystemFont(ofSize: 10)
         nameElementLabel2.numberOfLines = 0
         nameElementLabel2.adjustsFontSizeToFitWidth = true
         nameElementLabel2.sizeToFit()
-        blackUnity.addSubview(blackUnityImage)
-        blackUnity.addSubview(nameElementLabel2)
-        blackUnity.backgroundColor = .systemGray
-        blackUnity.layer.cornerRadius = 10
-        blackUnity.tag = 1
-        elementsScrollView.addSubview(blackUnity)
+        blackUnityView.addSubview(blackUnityImageView)
+        blackUnityView.addSubview(nameElementLabel2)
+        blackUnityView.backgroundColor = .systemGray
+        blackUnityView.layer.cornerRadius = 10
+        blackUnityView.tag = 1
+        elementsScrollView.addSubview(blackUnityView)
     }
 
     //inhaceFlat View
     private func viewElementChehol() {
 
-        inhaceFlat.frame = CGRect(x: 20, y: 10, width: 150, height: 180)
+        inhaceFlatView.frame = CGRect(x: 20, y: 10, width: 150, height: 180)
         nameElementLabel.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
         inhaceFlatImage.frame = CGRect(x: 10, y: 10, width: 120, height: 120)
         inhaceFlatImage.image = UIImage(named: "case")
@@ -235,17 +227,17 @@ final class SearchViewController: UIViewController {
         nameElementLabel.numberOfLines = 0
         nameElementLabel.adjustsFontSizeToFitWidth = true
         nameElementLabel.sizeToFit()
-        inhaceFlat.addSubview(inhaceFlatImage)
-        inhaceFlat.addSubview(nameElementLabel)
-        inhaceFlat.backgroundColor = .systemGray
-        inhaceFlat.layer.cornerRadius = 10
-        inhaceFlat.tag = 0
-        elementsScrollView.addSubview(inhaceFlat)
+        inhaceFlatView.addSubview(inhaceFlatImage)
+        inhaceFlatView.addSubview(nameElementLabel)
+        inhaceFlatView.backgroundColor = .systemGray
+        inhaceFlatView.layer.cornerRadius = 10
+        inhaceFlatView.tag = 0
+        elementsScrollView.addSubview(inhaceFlatView)
     }
 
 //Text Field
 
-    private func poiskTextFieldFunc() {
+    private func createPoiskTextField(){
 
         poiskTextField.frame = CGRect(x: 20, y: 120, width: 350, height: 40)
         let poiskImage = UIImage(named: "magnifyingglass")
@@ -262,8 +254,8 @@ final class SearchViewController: UIViewController {
     private func tapToGisture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hundleTap))
         tap.numberOfTapsRequired = 1
-        inhaceFlat.addGestureRecognizer(tap)
-        inhaceFlat.isUserInteractionEnabled = true
+        inhaceFlatView.addGestureRecognizer(tap)
+        inhaceFlatView.isUserInteractionEnabled = true
 
     }
 
@@ -271,7 +263,7 @@ final class SearchViewController: UIViewController {
 
         let productVC = ProductViewController()
         navigationController?.pushViewController(productVC, animated: true)
-        productVC.textLabel = nameElementLabel.text
+        productVC.labelText = nameElementLabel.text
         productVC.elementViewImage = inhaceFlatImage.image
         productVC.senaText = "3 999.9 Руб"
         

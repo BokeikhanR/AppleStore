@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate {
+final class WebViewController: UIViewController {
 
 //MARK: - View Properties
 
@@ -83,7 +83,7 @@ class WebViewController: UIViewController, WKUIDelegate {
 
 //MARK: View Components Function
 
-    fileprivate func createTheToolbar() {
+    private func createTheToolbar() {
         theToolbar.frame = CGRect(x:0, y: 720, width: 386, height: 50)
         theToolbar.backgroundColor = .gray
 
@@ -112,13 +112,14 @@ class WebViewController: UIViewController, WKUIDelegate {
 
 //MARK: -Create URL Address
 
-    fileprivate func crateURLAddress() {
+    private func crateURLAddress() {
         if let myURL = URL(string: "https://www.apple.com/shop/product/MWVC2ZM/A/leather-sleeve-for-16%E2%80%91inch-macbook-pro-midnight-blue?fnode=09b66a09ae9020901041b9b4913b4d0b6cc2968f8c521275f9deb409e71eb5c517ca839482ada85b5eeb6fca798f2abdd54ffe32c2b2309c5f9545c7c6e55af0013bcd8666dfadb4bc527a08990c45b91aa8fa6c6784737b5b7486e83357935de13bf1fdb7d4cee54cff76e23698ac0a"){
             let myRequest = URLRequest(url: myURL)
             webView.load(myRequest)
         }
     }
+}
 
-
-
+extension WebViewController: WKUIDelegate {
+    
 }

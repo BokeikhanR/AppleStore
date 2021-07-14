@@ -18,21 +18,21 @@ final class SearchViewController: UIViewController {
     private var variantLabel = UILabel()
 
     private var poiskTextField = UITextField()
-    private var zapros1 = UITextField()
-    private var zapros2 = UITextField()
-    private var zapros3 = UITextField()
-    private var zapros4 = UITextField()
+    private var airPodsTextField = UITextField()
+    private var appleCareTextField = UITextField()
+    private var beatsTextField = UITextField()
+    private var iphoneTextField = UITextField()
 
-    private var elementView = UIView()
+    private var inhaceFlat = UIView()
     private var nameElementLabel = UILabel()
-    private var elementImage = UIImageView()
+    private var inhaceFlatImage = UIImageView()
 
-    private var elementView2 = UIView()
-    private var elementView3 = UIView()
+    private var blackUnity = UIView()
+    private var caseBown = UIView()
     private var nameElementLabel2 = UILabel()
     private var nameElementLabel3 = UILabel()
-    private var elementImage2 = UIImageView()
-    private var elementImage3 = UIImageView()
+    private var blackUnityImage = UIImageView()
+    private var caseBownImage = UIImageView()
 
     private var elementsScrollView = UIScrollView()
 
@@ -70,13 +70,13 @@ final class SearchViewController: UIViewController {
 
     fileprivate func scrollViewFunction() {
         //Create first ViewElements
-        elementsScrollView.addSubview(elementView)
+        elementsScrollView.addSubview(inhaceFlat)
 
         //Create second ViewElement
-        elementsScrollView.addSubview(elementView2)
+        elementsScrollView.addSubview(blackUnity)
 
         //Create second ViewElement3
-        elementsScrollView.addSubview(elementView3)
+        elementsScrollView.addSubview(caseBownImage)
 
         let scrollViewRect = CGRect(x: 20, y: 250, width: 350, height: 200)
 
@@ -87,7 +87,7 @@ final class SearchViewController: UIViewController {
         view.addSubview(elementsScrollView)
     }
 
-//MARK: - Methods
+//MARK: - View Component Methods
 
 //View Elements
 
@@ -127,120 +127,120 @@ final class SearchViewController: UIViewController {
 //MARK: - Zapros TextFields
 
     private func zaprosTextFieldFunc() {
-        // Zapros number 1
+        // airPodsTextField number 1
 
-        zapros1.frame = CGRect(x: 25, y: 480, width: 200, height: 40)
+        airPodsTextField.frame = CGRect(x: 25, y: 480, width: 200, height: 40)
         let poiskImage1 = UIImage(named: "magnifyingglass")
-        addLeftImageTo1(txtField: zapros1, andImage: poiskImage1!)
-        zapros1.text = "   AirPods"
-        zapros1.textColor = .systemGray6
-        zapros1.font = UIFont.boldSystemFont(ofSize: 20)
-        zapros1.backgroundColor = .black
-        zapros1.layer.cornerRadius = 10
-        view.addSubview(zapros1)
+        addLeftImageTo1(txtField: airPodsTextField, andImage: poiskImage1!)
+        airPodsTextField.text = "   AirPods"
+        airPodsTextField.textColor = .systemGray6
+        airPodsTextField.font = UIFont.boldSystemFont(ofSize: 20)
+        airPodsTextField.backgroundColor = .black
+        airPodsTextField.layer.cornerRadius = 10
+        view.addSubview(airPodsTextField)
 
-        // Zapros number 2
+        // appleCareTextField number 2
 
-        zapros2.frame = CGRect(x: 25, y: 530, width: 200, height: 40)
+        appleCareTextField.frame = CGRect(x: 25, y: 530, width: 200, height: 40)
         let poiskImage2 = UIImage(named: "magnifyingglass")
-        addLeftImageTo2(txtField: zapros2, andImage: poiskImage2!)
-        zapros2.text = "   AppleCare"
-        zapros2.textColor = .systemGray6
-        zapros2.font = UIFont.boldSystemFont(ofSize: 20)
-        zapros2.backgroundColor = .black
-        zapros2.layer.cornerRadius = 10
-        view.addSubview(zapros2)
+        addLeftImageTo2(txtField: appleCareTextField, andImage: poiskImage2!)
+        appleCareTextField.text = "   AppleCare"
+        appleCareTextField.textColor = .systemGray6
+        appleCareTextField.font = UIFont.boldSystemFont(ofSize: 20)
+        appleCareTextField.backgroundColor = .black
+        appleCareTextField.layer.cornerRadius = 10
+        view.addSubview(appleCareTextField)
 
-        // Zapros number 3
+        // beatsTextField number 3
 
-        zapros3.frame = CGRect(x: 25, y: 580, width: 200, height: 40)
+        beatsTextField.frame = CGRect(x: 25, y: 580, width: 200, height: 40)
         let poiskImage3 = UIImage(named: "magnifyingglass")
-        addLeftImageTo3(txtField: zapros3, andImage: poiskImage3!)
-        zapros3.text = "   Beats"
-        zapros3.textColor = .systemGray6
-        zapros3.font = UIFont.boldSystemFont(ofSize: 20)
-        zapros3.backgroundColor = .black
-        zapros3.layer.cornerRadius = 10
-        view.addSubview(zapros3)
+        addLeftImageTo3(txtField: beatsTextField, andImage: poiskImage3!)
+        beatsTextField.text = "   Beats"
+        beatsTextField.textColor = .systemGray6
+        beatsTextField.font = UIFont.boldSystemFont(ofSize: 20)
+        beatsTextField.backgroundColor = .black
+        beatsTextField.layer.cornerRadius = 10
+        view.addSubview(beatsTextField)
 
-        // Zapros number 4
+        // iphoneTextField number 4
 
-        zapros4.frame = CGRect(x: 25, y: 630, width: 300, height: 40)
+        iphoneTextField.frame = CGRect(x: 25, y: 630, width: 300, height: 40)
         let poiskImage4 = UIImage(named: "magnifyingglass")
-        addLeftImageTo4(txtField: zapros2, andImage: poiskImage4!)
-        zapros4.text = "   Сравните модели Iphone"
-        zapros4.textColor = .systemGray6
-        zapros4.font = UIFont.boldSystemFont(ofSize: 20)
-        zapros4.backgroundColor = .black
-        zapros4.layer.cornerRadius = 10
-        view.addSubview(zapros4)
+        addLeftImageTo4(txtField: iphoneTextField, andImage: poiskImage4!)
+        iphoneTextField.text = "   Сравните модели Iphone"
+        iphoneTextField.textColor = .systemGray6
+        iphoneTextField.font = UIFont.boldSystemFont(ofSize: 20)
+        iphoneTextField.backgroundColor = .black
+        iphoneTextField.layer.cornerRadius = 10
+        view.addSubview(iphoneTextField)
     }
 
-//MARK: - View Element number 2
+//MARK: - View Elements
 
-    //Element number 3
+    //caseBown View
     fileprivate func caseBownFunction() {
-        elementView3.frame = CGRect(x: 360, y: 10, width: 150, height: 180)
+        caseBown.frame = CGRect(x: 360, y: 10, width: 150, height: 180)
         nameElementLabel3.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
-        elementImage3.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
-        elementImage3.image = UIImage(named: "caseBown")
-        elementImage3.contentMode = .scaleAspectFit
+        caseBownImage.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
+        caseBownImage.image = UIImage(named: "caseBown")
+        caseBownImage.contentMode = .scaleAspectFit
         nameElementLabel3.text = "Кожанный чехол для MacBook, 16 дьюмовый"
         nameElementLabel3.textColor = .white
         nameElementLabel3.font = UIFont.boldSystemFont(ofSize: 10)
         nameElementLabel3.numberOfLines = 0
         nameElementLabel3.adjustsFontSizeToFitWidth = true
         nameElementLabel3.sizeToFit()
-        elementView3.addSubview(elementImage3)
-        elementView3.addSubview(nameElementLabel3)
-        elementView3.backgroundColor = .systemGray
-        elementView3.layer.cornerRadius = 10
-        elementView3.tag = 2
-        elementsScrollView.addSubview(elementView3)
+        caseBown.addSubview(caseBownImage)
+        caseBown.addSubview(nameElementLabel3)
+        caseBown.backgroundColor = .systemGray
+        caseBown.layer.cornerRadius = 10
+        caseBown.tag = 2
+        elementsScrollView.addSubview(caseBown)
     }
 
-    //Element number 3
+    //blackUnity View
     private func viewElementBelt() {
 
-        elementView2.frame = CGRect(x: 190, y: 10, width: 150, height: 180)
+        blackUnity.frame = CGRect(x: 190, y: 10, width: 150, height: 180)
         nameElementLabel2.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
-        elementImage2.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
-        elementImage2.image = UIImage(named: "belt")
-        elementImage2.contentMode = .scaleAspectFit
+        blackUnityImage.frame = CGRect(x: 10, y: 11, width: 120, height: 100)
+        blackUnityImage.image = UIImage(named: "belt")
+        blackUnityImage.contentMode = .scaleAspectFit
         nameElementLabel2.text = "Спортивный ремешок Black Unity"
         nameElementLabel2.textColor = .white
         nameElementLabel2.font = UIFont.boldSystemFont(ofSize: 10)
         nameElementLabel2.numberOfLines = 0
         nameElementLabel2.adjustsFontSizeToFitWidth = true
         nameElementLabel2.sizeToFit()
-        elementView2.addSubview(elementImage2)
-        elementView2.addSubview(nameElementLabel2)
-        elementView2.backgroundColor = .systemGray
-        elementView2.layer.cornerRadius = 10
-        elementView2.tag = 1
-        elementsScrollView.addSubview(elementView2)
+        blackUnity.addSubview(blackUnityImage)
+        blackUnity.addSubview(nameElementLabel2)
+        blackUnity.backgroundColor = .systemGray
+        blackUnity.layer.cornerRadius = 10
+        blackUnity.tag = 1
+        elementsScrollView.addSubview(blackUnity)
     }
 
-    //View Element number 1
+    //inhaceFlat View
     private func viewElementChehol() {
 
-        elementView.frame = CGRect(x: 20, y: 10, width: 150, height: 180)
+        inhaceFlat.frame = CGRect(x: 20, y: 10, width: 150, height: 180)
         nameElementLabel.frame = CGRect(x: 20, y: 130, width: 120, height: 30)
-        elementImage.frame = CGRect(x: 10, y: 10, width: 120, height: 120)
-        elementImage.image = UIImage(named: "case")
-        elementImage.contentMode = .scaleAspectFit
+        inhaceFlatImage.frame = CGRect(x: 10, y: 10, width: 120, height: 120)
+        inhaceFlatImage.image = UIImage(named: "case")
+        inhaceFlatImage.contentMode = .scaleAspectFit
         nameElementLabel.text = "Чехол Inhace Flat для MacBook Pro 16 дюймов"
         nameElementLabel.textColor = .white
         nameElementLabel.font = UIFont.boldSystemFont(ofSize: 10)
         nameElementLabel.numberOfLines = 0
         nameElementLabel.adjustsFontSizeToFitWidth = true
         nameElementLabel.sizeToFit()
-        elementView.addSubview(elementImage)
-        elementView.addSubview(nameElementLabel)
-        elementView.backgroundColor = .systemGray
-        elementView.layer.cornerRadius = 10
-        elementView.tag = 0
-        elementsScrollView.addSubview(elementView)
+        inhaceFlat.addSubview(inhaceFlatImage)
+        inhaceFlat.addSubview(nameElementLabel)
+        inhaceFlat.backgroundColor = .systemGray
+        inhaceFlat.layer.cornerRadius = 10
+        inhaceFlat.tag = 0
+        elementsScrollView.addSubview(inhaceFlat)
     }
 
 //Text Field
@@ -262,8 +262,8 @@ final class SearchViewController: UIViewController {
     private func tapToGisture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hundleTap))
         tap.numberOfTapsRequired = 1
-        elementView.addGestureRecognizer(tap)
-        elementView.isUserInteractionEnabled = true
+        inhaceFlat.addGestureRecognizer(tap)
+        inhaceFlat.isUserInteractionEnabled = true
 
     }
 
@@ -272,7 +272,7 @@ final class SearchViewController: UIViewController {
         let productVC = ProductViewController()
         navigationController?.pushViewController(productVC, animated: true)
         productVC.textLabel = nameElementLabel.text
-        productVC.elementViewImage = elementImage.image
+        productVC.elementViewImage = inhaceFlatImage.image
         productVC.senaText = "3 999.9 Руб"
         
         
@@ -290,29 +290,29 @@ final class SearchViewController: UIViewController {
     @objc func addLeftImageTo1(txtField: UITextField, andImage img: UIImage){
         let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))
         leftImageView.image = img
-        zapros1.leftView = leftImageView
-        zapros1.leftViewMode = .always
+        airPodsTextField.leftView = leftImageView
+        airPodsTextField.leftViewMode = .always
     }
 
     @objc func addLeftImageTo2(txtField: UITextField, andImage img: UIImage){
         let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))
         leftImageView.image = img
-        zapros2.leftView = leftImageView
-        zapros2.leftViewMode = .always
+        appleCareTextField.leftView = leftImageView
+        appleCareTextField.leftViewMode = .always
     }
 
     @objc func addLeftImageTo3(txtField: UITextField, andImage img: UIImage){
         let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))
         leftImageView.image = img
-        zapros3.leftView = leftImageView
-        zapros3.leftViewMode = .always
+        beatsTextField.leftView = leftImageView
+        beatsTextField.leftViewMode = .always
     }
 
     @objc func addLeftImageTo4(txtField: UITextField, andImage img: UIImage){
         let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))
         leftImageView.image = img
-        zapros4.leftView = leftImageView
-        zapros4.leftViewMode = .always
+        iphoneTextField.leftView = leftImageView
+        iphoneTextField.leftViewMode = .always
     }
 
 }

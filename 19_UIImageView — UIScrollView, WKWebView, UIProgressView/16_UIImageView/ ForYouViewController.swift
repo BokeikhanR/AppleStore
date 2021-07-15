@@ -240,12 +240,22 @@ final class ForYouViewController: UIViewController {
     }
 
      func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
         if let image = info[.originalImage] as? UIImage {
             let img = image.resizeImage(to: CGSize(width: 30, height: 30))
+            let imageData = image.pngData()
+            UserDefaults.standard.setValue(imageData, forKey: "avatar")
             addButton.setImage(img, for: .normal)
 
             dismiss(animated: true)
         }
+    }
+
+//MARK: - Create User Defaults
+
+    private func createAddButton(){
+        guard let data = UserDefaults.standard.value(forKey: "avatar") as? Data else {return}
+        addButton.setImage(UIImage(data: data)? .resizeImage(to: CGSize(width: 30, height: 30)), for: .normal )
     }
 
 //MARK: - View Methods
@@ -265,10 +275,7 @@ extension UIImage {
         }
     }
 }
-extension ForYouViewController: UIImagePickerControllerDelegate{
 
-}
+extension ForYouViewController: UIImagePickerControllerDelegate{}
 
-extension ForYouViewController: UINavigationControllerDelegate{
-
-}
+extension ForYouViewController: UINavigationControllerDelegate{}

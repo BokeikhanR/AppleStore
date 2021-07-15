@@ -56,7 +56,7 @@ final class ForYouViewController: UIViewController {
 
 //MARK: - Label Elements
 
-    fileprivate func createNoviLabel() {
+    private func createNoviLabel() {
         noviLabel.frame = CGRect(x: 20, y: 80, width: 250, height: 100)
         noviLabel.text = "Вот что нового"
         noviLabel.textColor = .black
@@ -65,7 +65,7 @@ final class ForYouViewController: UIViewController {
         view.addSubview(noviLabel)
     }
 
-    fileprivate func createRecomendationLabel() {
+    private func createRecomendationLabel() {
         recomendasislabel.frame = CGRect(x: 20, y: 400,
                                          width: 250, height: 100)
         recomendasislabel.text = "Рекомендуется вам"
@@ -75,7 +75,7 @@ final class ForYouViewController: UIViewController {
         view.addSubview(recomendasislabel)
     }
 
-    fileprivate func createNovostiLabel() {
+    private func createNovostiLabel() {
         novostiLabel.frame = CGRect(x: 120, y: 490,
                                     width: 200, height: 100)
         novostiLabel.text = "Получайте новости о своем заказе в режиме реального времени"
@@ -88,7 +88,7 @@ final class ForYouViewController: UIViewController {
         view.addSubview(novostiLabel)
     }
 
-    fileprivate func createUvedomlenieLabel() {
+    private func createUvedomlenieLabel() {
         uvedLabel.frame = CGRect(x: 120, y: 550,
                                  width: 230, height: 100)
         uvedLabel.text = "Включите уведомления, чтобы получать новости о своем заказе."
@@ -104,8 +104,8 @@ final class ForYouViewController: UIViewController {
 
 //MARK: - View Elements
 
-    fileprivate func createZakazView() {
-        //View Zakaz
+    private func createZakazView() {
+
         novostiView.frame = CGRect(x: 20, y: 180, width: 350, height: 150)
         novostiView.backgroundColor = .white
         novostiView.layer.shadowColor = UIColor.systemGray.cgColor
@@ -131,20 +131,18 @@ final class ForYouViewController: UIViewController {
         myView.frame = CGRect(x: 0, y: 100, width: 350, height: 1)
         myView.backgroundColor = .systemGray4
         novostiView.addSubview(myView)
-
-
-        chevronRightButton.frame = CGRect(x: 295, y: 48, width: 50 , height: 50)
-        chevronRightButton.setImage(UIImage(named: "chevron.right-2"), for: .normal)
+        chevronRightButton.frame = CGRect(x: 295, y: 48,
+                                          width: 50 , height: 50)
+        chevronRightButton.setImage(UIImage(named: "chevron.right-2"),
+                                    for: .normal)
         novostiView.addSubview(chevronRightButton)
 
-        //Zakaz Progress View
         zakazProgressView.progressViewStyle = .default
-        zakazProgressView.frame = CGRect(x: 30, y: 120, width: 300, height: 40)
+        zakazProgressView.frame = CGRect(x: 30, y: 120,
+                                         width: 300, height: 40)
         zakazProgressView.setProgress(0.5, animated: true)
         zakazProgressView.progressTintColor = .systemGreen
         novostiView.addSubview(zakazProgressView)
-
-        //ZAkaz obrabotka
 
         prosesLabel.frame = CGRect(x: 10, y: 130, width: 100, height: 20)
         prosesLabel.text = "Обрабатывается"
@@ -161,15 +159,14 @@ final class ForYouViewController: UIViewController {
         dostkaLabel.textColor = .gray
         dostkaLabel.font = UIFont(name: "arial", size: 12)
         novostiView.addSubview(dostkaLabel)
-
         view.addSubview(novostiView)
     }
 
     //MARK: - createChevronAndBellButtons
 
 
-    fileprivate func createChevronAndBellButtons() {
-    //buttons
+    private func createChevronAndBellButtons() {
+
     let bellImage = UIImage(named: "bell.square")
     bellButton.frame = CGRect(x: 20, y: 460, width: 100, height: 100)
     bellButton.imageView?.sizeToFit()
@@ -185,9 +182,9 @@ final class ForYouViewController: UIViewController {
 }
 
 
-//MARK: - createUstoistvaLabels
+//MARK: - create UstroistvaLabels
     private func createUstoistvaLabels() {
-        //ustoistva labels
+
         ustroistvalabel.frame = CGRect(x: 20, y: 600,
                                        width: 250, height: 100)
         ustroistvalabel.text = "ваши устройства"
@@ -206,6 +203,7 @@ final class ForYouViewController: UIViewController {
     }
 
 //MARK: - Navigation Controll
+    
     private func navigationControll(){
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -259,6 +257,7 @@ final class ForYouViewController: UIViewController {
 }
 
 //MARK: Extension UIImage
+
 extension UIImage {
     func resizeImage(to size: CGSize) -> UIImage{
         return UIGraphicsImageRenderer(size: size).image{_ in

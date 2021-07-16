@@ -39,7 +39,7 @@ final class DataViewController: UIViewController {
         return labelSecond
     }()
     
-    lazy var subView: [UIView] = [self.yourImageView, self.nameLabel]
+    lazy var subView: [UIView] = [yourImageView, nameLabel]
     
 //MARK: - Initializes
 
@@ -52,7 +52,7 @@ final class DataViewController: UIViewController {
         nameLabel.text = dataWith.label
         secondLabel.text = dataWith.labelSecond1
 
-        for view in subView{ self.view.addSubview(view) }
+        for view in subView{ view.addSubview(view) }
     }
     
     required init?(coder: NSCoder) {

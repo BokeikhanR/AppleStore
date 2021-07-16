@@ -9,7 +9,7 @@ import UIKit
 
 final class MyViewController1: UIPageViewController {
 
-    //MARK: - Private Properties
+//MARK: - Private Properties
 
     private var currentIndex = 0
     private var imageArray = [
@@ -20,8 +20,6 @@ final class MyViewController1: UIPageViewController {
     private var skipButton = UIButton()
     private var nextButton = UIButton()
     private var getButton = UIButton()
-
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,12 +93,12 @@ final class MyViewController1: UIPageViewController {
         nextButton.setTitle("NEXT", for: .normal)
         nextButton.backgroundColor = .white
         nextButton.setTitleColor(.systemBlue, for: .normal)
-        nextButton.addTarget(self, action: #selector(nextTapped(sender:)), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextTapped), for: .touchUpInside)
         view.addSubview(nextButton)
     }
 
 //MARK: - Next Button Tapped
-    @objc func nextTapped(sender: UIButton){
+    @objc func nextTapped(){
         if currentIndex < imageArray.count - 1 {
             currentIndex += 1
             setViewControllers([photoArray[currentIndex]], direction: .forward, animated: true)

@@ -13,29 +13,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        let buyVC = BuyViewController()
-        let forYouVC = ForYouViewController()
-        let searchVC = SearchViewController()
-        let bascetVC = BascetViewController()
+    guard let scene = (scene as? UIWindowScene) else { return }
 
-        let navigationController = UINavigationController(rootViewController: searchVC)
-    
-        let forYouNavigationController = UINavigationController(rootViewController: forYouVC)
+            window?.windowScene = scene
+            window?.rootViewController = MyViewController1()
+            window?.makeKeyAndVisible()
 
-        buyVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
-        forYouVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "person.crop.circle"), tag: 1)
-        searchVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "magnifyingglass"), tag: 2)
-        bascetVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "bag"), tag: 3)
-
-        let tabBarVC = UITabBarController()
-        tabBarVC.setViewControllers([buyVC, forYouNavigationController, navigationController, bascetVC], animated: true)
-        tabBarVC.tabBar.barTintColor = .black
-
-        window?.rootViewController = tabBarVC
-        window?.makeKeyAndVisible()
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
-    }
-
+  }
 }
 

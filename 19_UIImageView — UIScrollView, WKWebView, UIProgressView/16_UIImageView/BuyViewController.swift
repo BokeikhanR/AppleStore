@@ -10,18 +10,14 @@ import UIKit
 final class BuyViewController: UIViewController {
     
 //MARK: - View Components
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createView()
     }
 
 //MARK: View Methods
-
-    fileprivate func createView() {
+    private func createView() {
         title = "Купить"
         view.backgroundColor = .black
     }
-
 }

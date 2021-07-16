@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842C6C4426A0B246008DD92D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C6C4326A0B246008DD92D /* DataViewController.swift */; };
+		842C6C4726A0B54C008DD92D /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C6C4626A0B54C008DD92D /* DateHelper.swift */; };
+		842C6C4A26A0C03F008DD92D /* MyViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C6C4926A0C03F008DD92D /* MyViewController1.swift */; };
 		845F8801269DFAAF0064FA03 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8800269DFAAF0064FA03 /* WebViewController.swift */; };
 		847C39AB269851F100CFE503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39AA269851F100CFE503 /* AppDelegate.swift */; };
 		847C39AD269851F100CFE503 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C39AC269851F100CFE503 /* SceneDelegate.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842C6C4326A0B246008DD92D /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		842C6C4626A0B54C008DD92D /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		842C6C4926A0C03F008DD92D /* MyViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController1.swift; sourceTree = "<group>"; };
 		845F8800269DFAAF0064FA03 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		847C39A7269851F100CFE503 /* 16_UIImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 16_UIImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847C39AA269851F100CFE503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842C6C4226A0B167008DD92D /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				842C6C4926A0C03F008DD92D /* MyViewController1.swift */,
+				842C6C4326A0B246008DD92D /* DataViewController.swift */,
+				842C6C4626A0B54C008DD92D /* DateHelper.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
 		847C399E269851F100CFE503 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +85,7 @@
 				847C39AA269851F100CFE503 /* AppDelegate.swift */,
 				847C39AC269851F100CFE503 /* SceneDelegate.swift */,
 				847C39C4269871C400CFE503 /* BuyViewController.swift */,
+				842C6C4226A0B167008DD92D /* PageViewController */,
 				847C39C026986E0D00CFE503 /*  ForYouViewController.swift */,
 				847C39AE269851F100CFE503 /* SearchViewController.swift */,
 				847C39C92698721E00CFE503 /*  BascetViewController.swift */,
@@ -154,11 +171,14 @@
 			files = (
 				847C39C5269871C400CFE503 /* BuyViewController.swift in Sources */,
 				847C39C126986E0D00CFE503 /*  ForYouViewController.swift in Sources */,
+				842C6C4426A0B246008DD92D /* DataViewController.swift in Sources */,
 				847C39CA2698721E00CFE503 /*  BascetViewController.swift in Sources */,
+				842C6C4A26A0C03F008DD92D /* MyViewController1.swift in Sources */,
 				847C39CE2698D3E900CFE503 /* ProductViewController.swift in Sources */,
 				847C39AF269851F100CFE503 /* SearchViewController.swift in Sources */,
 				847C39AB269851F100CFE503 /* AppDelegate.swift in Sources */,
 				847C39AD269851F100CFE503 /* SceneDelegate.swift in Sources */,
+				842C6C4726A0B54C008DD92D /* DateHelper.swift in Sources */,
 				845F8801269DFAAF0064FA03 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
